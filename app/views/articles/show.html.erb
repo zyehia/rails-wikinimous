@@ -1,6 +1,9 @@
 <h1>
   <%= @article.title %>
   <a href="<%= edit_article_path %>"><i class="far fa-edit"></i></a>
+  <%= link_to article_path, method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="fas fa-trash"></i>
+  <% end %>
 </h1>
 <hr>
 <p>
